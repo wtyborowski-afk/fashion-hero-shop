@@ -23,6 +23,7 @@ const footerSections = [
   {
     title: "COMPANY",
     links: [
+      { label: "Sell on FashionHero", href: "/sell" },
       { label: "Our Story", href: "#" },
       { label: "Our Materials", href: "#" },
       { label: "Sustainability", href: "#" },

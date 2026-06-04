@@ -9,6 +9,7 @@ import { MegaMenuNav, MobileMegaMenuContent } from "./mega-menu";
 import { useAuth } from "./auth-provider";
 
 const secondaryLinks = [
+  { label: "Sell on FashionHero", href: "/sell" },
   { label: "About", href: "/about" },
 ];
 
