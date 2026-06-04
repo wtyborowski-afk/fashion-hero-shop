@@ -1,0 +1,34 @@
+# Normalizacja końców linii.
+# W repo wszystko jest przechowywane jako LF; przy checkout git dobiera
+# natywne końce linii dla danego systemu. Eliminuje fałszywe diffy CRLF vs LF.
+* text=auto
+
+# Pliki tekstowe — zawsze LF w repo
+*.md      text eol=lf
+*.txt     text eol=lf
+*.json    text eol=lf
+*.js      text eol=lf
+*.mjs     text eol=lf
+*.cjs     text eol=lf
+*.ts      text eol=lf
+*.tsx     text eol=lf
+*.css     text eol=lf
+*.scss    text eol=lf
+*.html    text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+
+# Pliki binarne — git ich nie dotyka (żadnej konwersji końców linii)
+*.pptx    binary
+*.pdf     binary
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.webp    binary
+*.gif     binary
+*.ico     binary
+*.mp4     binary
+*.webm    binary
+*.woff    binary
+*.woff2   binary
+*.ttf     binary
