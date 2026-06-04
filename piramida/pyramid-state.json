@@ -1,0 +1,129 @@
+{
+  "company": {
+    "name": "FashionHero",
+    "description": "Marketplace modowy w Polsce, 2.4M kupujacych, 4200 sprzedawcow, GMV ~60M PLN/mies.",
+    "industry": "fashion marketplace",
+    "stage": "scale-up"
+  },
+  "levels": {
+    "mission": {
+      "status": "done",
+      "text": "Pokazujemy, ze moda moze byc niezalezna, trwala i warta swojej ceny - dla kupujacych i sprzedawcow, ktorzy to rozumieja.",
+      "rationale": "Kupujacy odrzuca fast fashion i szuka jakosci. Sprzedawcy to niezalezni tworcy, nie masowi retailerzy.",
+      "exclusions": ["Nie wpuszczamy sprzedawcow fast fashion", "Nie budujemy wlasnej marki private label"]
+    },
+    "vision": {
+      "status": "done",
+      "text": "Za 3 lata kazdy niezalezny sprzedawca mody w Polsce traktuje FashionHero jako partnera wzrostu, nie tylko kanal sprzedazy. Seller Tools: 30% przychodu firmy, 1000+ placych sprzedawcow.",
+      "horizon": "2029",
+      "rationale": "Seller Tools dla tego samego tworcy z misji. Dywersyfikacja przychodu odpowiada na priorytet Mai przed seria C."
+    },
+    "nsm": {
+      "status": "done",
+      "metric": "Miesieczna liczba zamowien bez zwrotu od kupujacych powracajacych (min. 2. zakup w ciagu 90 dni)",
+      "amplitudeType": "transaction",
+      "equation": "Kupujacy wymienia pieniadze i czas na produkt wart posiadania. FashionHero mierzy: zatrzymane zamowienie od lojalnego kupujacego.",
+      "rationale": "Laczy retencje kupujacych z jakoscia transakcji. Potrojenie = wyzszy LTV, nizsza logistyka, wyzsza marza. Dostepny w PostHog."
+    },
+    "strategy": {
+      "status": "done",
+      "oneYearGoal": "Do maja 2027: marza platformy >= 21% (bez ciecia GMV) + 100 sprzedawcow aktywnie uzywajacych Seller Tools.",
+      "diagnosis": "Marza spada bo nagradzamy nie tych sprzedawcow: negotiated sellerzy dostaja najnizsze prowizje i generuja 13x wiecej ticketow supportu. Ten koszt jest niewidoczny w P&L. Seller Tools nie istnieja.",
+      "theoryOfChange": "Widocznosc kosztu per seller + Seller Tools jako alternatywa dla rabatu prowizji. Weryfikacja Q3 2026.",
+      "guidingPolicy": "Przewagi: dane 2.4M kupujacych + 4200 relacji ze sprzedawcami. Wykluczenia: nie fast fashion, nie private label, nie logistyka wlasna, nie enterprise, nie konkurujemy cena z Zalando, nie D2C.",
+      "coherentActions": [
+        { "name": "Fake door test -> Seller Tools MVP", "owner": "Wojciech", "metric": "30 placych sellerow do Q4 2026" },
+        { "name": "Prawdziwy koszt sellera w P&L", "owner": "Ela", "metric": "100% negotiated sellerow z marza netto do Q3 2026" },
+        { "name": "Retencja kupujacych", "owner": "Konrad", "metric": "NSM +25% vs baseline Q2 2026" },
+        { "name": "Restrukturyzacja tierow prowizji", "owner": "Wojciech + Maja", "metric": "<=5 wnioskow o obnizke/mies. od Q4 2026" }
+      ],
+      "checkpoints": {
+        "success": "Marza >= 22%, 100+ placych sellerow, NSM +30%. Przyspieszamy Seller Tools, rozważamy geografie Q3 2027.",
+        "partial": "Marza >= 21% ale <10 placych sellerow LUB odwrotnie. Pivot produktu lub restrukturyzacja bez produktu.",
+        "fail": "Fake door CTR <3% i marza spada po Q3 2026. Wracamy do OST.",
+        "risks": [
+          "Marek: build bez deliverable. Mitygacja: fake door najpierw.",
+          "Ola: blokuje restrukturyzacje. Mitygacja: dane Eli.",
+          "Forte: eskaluje 0% komisji. Mitygacja: A/B test z wylacznikiem.",
+          "Adopcja: sellerzy nie placa. Mitygacja: kryterium wyjscia po 90 dniach."
+        ]
+      }
+    },
+    "metrics": {
+      "status": "done",
+      "quarter": "Q3 2026",
+      "okrs": [
+        {
+          "objective": "Udowodnij, ze sprzedawcy chca placic za Seller Tools",
+          "keyResults": [
+            { "text": "Fake door CTR >= 10% i completion >= 35% w 7 dni od uruchomienia (15 lipca)" },
+            { "text": ">= 30 sprzedawcow konczy flow zainteresowania do 31 sierpnia" },
+            { "text": "Brief MVP zatwierdzony przez Marka do 1 sierpnia" }
+          ],
+          "owner": "Wojciech",
+          "coherentActionLink": "CA1"
+        },
+        {
+          "objective": "Zrob ukryty koszt sellera widocznym w P&L",
+          "keyResults": [
+            { "text": "Model marzy per seller gotowy dla 100% negotiated do 1 wrzesnia" },
+            { "text": "Dashboard rekrutacyjny Oli z kategoria jako filtrem do 15 wrzesnia" },
+            { "text": "Pierwszy P&L review per tier z Maja do 30 wrzesnia" }
+          ],
+          "owner": "Ela",
+          "coherentActionLink": "CA2"
+        },
+        {
+          "objective": "Zmierz i rusz NSM",
+          "keyResults": [
+            { "text": "Baseline NSM zatwierdzony do 15 lipca" },
+            { "text": "Program powracajacego kupujacego dla >= 10K kupujacych do 31 sierpnia" },
+            { "text": "NSM w sierpniu >= 5% powyzej baseline z czerwca" }
+          ],
+          "owner": "Konrad",
+          "coherentActionLink": "CA3"
+        }
+      ]
+    },
+    "roadmap": {
+      "status": "done",
+      "capacity": { "large": 2, "small": 3, "note": "12 osob product+eng, 2 squady po 3-4 inz." },
+      "themes": {
+        "Q3 2026": ["Walidacja Seller Tools", "Infrastruktura decyzyjna"],
+        "Q4 2026": ["Budowa Seller Tools MVP", "Restrukturyzacja tier prowizji"],
+        "Q1 2027": ["Komercjalizacja Seller Tools", "Skalowanie retencji"],
+        "Q2 2027": ["Konsolidacja przed seria C", "Przygotowanie rundy"]
+      },
+      "quarters": {
+        "Q3 2026": [
+          { "name": "Fake door test Seller Tools", "owner": "Wojciech", "size": "S", "okriink": "O1", "caLink": "CA1" },
+          { "name": "Seller Cost Model dashboard (marza per seller)", "owner": "Ela", "size": "L", "okrLink": "O2", "caLink": "CA2" },
+          { "name": "Retention Engine v1 (post-purchase + personalizacja)", "owner": "Konrad", "size": "L", "okrLink": "O3", "caLink": "CA3" }
+        ],
+        "Q4 2026": [
+          { "name": "Seller Tools MVP (analytics + promoted listings)", "owner": "Wojciech", "size": "L", "caLink": "CA1", "prereq": "Fake door CTR >= 10%" },
+          { "name": "Nowy tier prowizji 20-21% w systemie", "owner": "Maja", "size": "L", "caLink": "CA4", "prereq": "Seller Cost Model z Q3" },
+          { "name": "Pilotaz Seller Tools z 30 sellerami", "owner": "Wojciech", "size": "S", "caLink": "CA1" }
+        ],
+        "Q1 2027": [
+          { "name": "Seller Tools commercial launch (billing + self-serve)", "owner": "Wojciech", "size": "L", "caLink": "CA1", "prereq": "MVP i pilotaz z Q4" },
+          { "name": "Retention Engine v2 (rekomendacje od tego samego sellera)", "owner": "Konrad", "size": "L", "caLink": "CA3" },
+          { "name": "Deck serii C (metryki + story + model)", "owner": "Maja", "size": "S", "caLink": "CA1" }
+        ],
+        "Q2 2027": [
+          { "name": "Seller Tools upsell (automatyczny tier 500-1500 PLN)", "owner": "Wojciech", "size": "S", "caLink": "CA1" },
+          { "name": "NSM weekly report automatyczny dla boardu", "owner": "Ela", "size": "S", "caLink": "CA3" },
+          { "name": "Data room due diligence", "owner": "Maja", "size": "S" }
+        ]
+      },
+      "dependencies": [
+        "Fake door Q3 → Seller Tools MVP Q4 (gate: CTR >= 10%)",
+        "Seller Cost Model Q3 → Tier restrukturyzacja Q4",
+        "MVP + pilotaz Q4 → Commercial launch Q1 2027",
+        "Commercial launch Q1 → Seria C deck Q2"
+      ],
+      "criticalPath": "Fake door Q3 → MVP Q4 → Launch Q1 → Seria C Q2. Single point of failure: fake door test."
+    }
+  },
+  "lastUpdated": "2026-05-20"
+}

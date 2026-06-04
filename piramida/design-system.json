@@ -1,0 +1,14 @@
+{
+  "colors": {
+    "bg": "F2EDE6",
+    "text": "111111",
+    "muted": "777777",
+    "rule": "DDD8D2",
+    "primary": "1A1816",
+    "accent": "B5916A",
+    "blockBg": "FFFFFF"
+  },
+  "font": "Helvetica Neue",
+  "cornerRadius": 4,
+  "source": "fashionhero.aiproductheroes.pl"
+}
